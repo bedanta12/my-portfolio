@@ -12,8 +12,8 @@ const Navbar = () => {
         <path d="M35 26H46"  stroke-width="2" stroke-linecap="round"/>
         <rect x="1" y="1" width="70" height="38" rx="19" stroke-width="2"/>
       </svg>
-      <ThemeButton />
-      <div className="flex flex-row mr-12 gap-6 font-medium">
+      <ThemeButton/>
+      <div className="flex flex-row gap-6 font-medium pr-6">
         <div>
           Contact
         </div>
@@ -24,8 +24,7 @@ const Navbar = () => {
           Resume
         </div>
       </div>
-        
-      </nav>
+    </nav>
     );
 };
 

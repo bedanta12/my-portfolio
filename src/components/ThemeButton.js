@@ -21,7 +21,7 @@ const ThemeButton = () => {
       <div>
         광
       </div>
-            {/* <button className='bg-[#F1EDFF] p-3 border border-[#2B0C7D] rounded-l-md'
+            <button className='bg-[#F1EDFF] p-3 border border-[#2B0C7D] rounded-l-md'
             onClick={() => {setTheme('light');}}>
                 <Image 
                 src="/light-icon.svg" 
@@ -38,7 +38,7 @@ const ThemeButton = () => {
                 width={22} 
                 height={22}
                 />
-            </button> */}
+            </button>
         </div>
   )
 }
