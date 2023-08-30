@@ -8,6 +8,8 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -32,4 +34,10 @@
 
 #landing-text{
   line-height: 0.85 !important;
+}
+
+nav{
+  background-image: radial-gradient( rgba(0, 0, 0, 0) 1px, var(--background) 1px );
+  background-size: 4px 4px;
+  backdrop-filter: blur(3px);
 }
