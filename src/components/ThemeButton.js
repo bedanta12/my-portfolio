@@ -1,46 +1,62 @@
 'use client'
-import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 
 const ThemeButton = () => {
-  const { currentTheme, setTheme } = useTheme()
-
+  const { theme, setTheme } = useTheme()
+  const toggle = () =>{    
+    if (theme==='light') setTheme('dark');
+    else setTheme('light');
+  }
+  
   const [mounted, setMounted] = useState(false)
-  useEffect(() => setMounted(true), [])
+  useEffect(() => {
+    console.log(theme);
+    setMounted(true)
+  }, [])
 
   if (!mounted) {
     return null
   }
 
   return (
-    <div className="flex flex-row bg-[#FF4900] rounded-full gap-2 p-2 font-medium">
-      <div>
-        밤
-      </div>
-      <div>
-        광
-      </div>
-            <button className='bg-[#F1EDFF] p-3 border border-[#2B0C7D] rounded-l-md'
-            onClick={() => {setTheme('light');}}>
-                <Image 
-                src="/light-icon.svg" 
-                alt='light-icon'
-                width={22} 
-                height={22}
-                />
-            </button>
-            <button className='bg-[#8A68FF] p-3 border border-[#2B0C7D] border-l-0 rounded-r-md'
-            onClick={() => {setTheme('dark');}}>
-                <Image 
-                src="/dark-icon.svg" 
-                alt='dark-icon'
-                width={22} 
-                height={22}
-                />
-            </button>
-        </div>
+        <div className="flex items-center">
+            <input
+              type="checkbox"
+              id="darkModeToggle"
+              className="hidden"
+              checked={theme==='dark'}
+              onChange={toggle}
+              onClick={toggle}
+            />
+            <label
+              htmlFor="darkModeToggle"
+              className={`flex items-center bg-[#FF4900] rounded-full gap-2 p-2 font-medium flex-row relative`}
+            >
+              <div
+                className={`fixed w-3.5 h-3.5 rounded-full transition-transform duration-300 transform ${
+                  theme==='dark' ? 'bg-[#121212] translate-x-6' : 'translate-x-0 bg-[#FFF8F8]'
+                }`}
+              />
+              <span className={`text-[#FFF8F8] ${theme==='dark' ? 'transition-opacity ease-in duration-280 opacity-100' : 'transition-opacity ease-out duration-280 opacity-0'}`}>
+              밤
+              </span>
+              <span className={`text-[#121212] ${theme==='dark' ? 'transition-opacity ease-out duration-280 opacity-0' : 'transition-opacity ease-in duration-280 opacity-100'}`}>
+              광
+              </span>
+            </label>
+    </div>
   )
 }
 
 export default ThemeButton
+
+{/* <div className="relative w-48 h-24 cursor-pointer" onClick={toggleDarkMode}>
+      <div
+        className={`absolute w-24 h-24 flex items-center justify-center rounded-full font-bold text-sm transition-all duration-500 ${
+          isDarkMode ? 'bg-black text-white left-0' : 'bg-white text-black right-0'
+        }`}
+      >
+        {isDarkMode ? 'Dark' : 'Light'}
+      </div>
+    </div> */}

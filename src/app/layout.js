@@ -18,7 +18,7 @@ const aeonik = localFont({src: "../../fonts/Aeonik-Regular.ttf"})
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-[#FFF8F8] dark:bg-[#121212]" style={aeonik.style}>
+      <body className="bg-[#FFF8F8] dark:bg-[#121212] scrollbar-hide" style={aeonik.style}>
         <ThemeProvider enableSystem={true} attribute="class">
           {children}
         </ThemeProvider>

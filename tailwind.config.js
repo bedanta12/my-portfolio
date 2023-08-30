@@ -19,15 +19,19 @@ module.exports = {
       animation: {
         marquee: 'marquee 15s linear infinite',
         marquee2: 'marquee2 15s linear infinite',
+        fadein: 'fadein',
+        fadeout: 'fadeout'
       },
       keyframes: {
-        marquee: {
-          '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-100%)' },
+        fadein: {
+          '0%': { transform: 'opacity(0.0)' },
+          '50%': { transform: 'opacity(0.0)' },
+          '100%': { transform: 'opacity(1.0)' },
         },
-        marquee2: {
-          '0%': { transform: 'translateX(100%)' },
-          '100%': { transform: 'translateX(0%)' },
+        fadeout: {
+          '0%': { transform: 'opacity(1.0)' },
+          '50%': { transform: 'opacity(1.0)' },
+          '100%': { transform: 'opacity(0.0)' },
         },
       },
     },
