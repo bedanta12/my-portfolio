@@ -5,7 +5,7 @@ import ThemeButton from './ThemeButton';
 const Navbar = () => {
   
   return (    
-    <nav className="flex flex-row justify-between p-4 items-center fixed left-6 top-0 right-6 z-20 overflow-hidden scrollbar-hide">
+    <nav className="flex flex-row justify-between p-4 items-center fixed left-6 top-0 right-6 z-20 overflow-hidden scrollbar-hide bg-[#DED5D4] dark:bg-[#303030]">
       <svg width="72" height="40" viewBox="0 0 72 40" className="dark:stroke-[#FFF8F8] stroke-[#121212] fill-transparent">
         <rect x="16" y="14" width="16" height="16" rx="8" className='dark:fill-[#FFF8F8] fill-[#121212]'/>
         <rect x="48" y="14" width="16" height="16" rx="8" className='dark:fill-[#FFF8F8] fill-[#121212]'/>

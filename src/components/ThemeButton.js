@@ -4,14 +4,15 @@ import { useTheme } from 'next-themes'
 
 const ThemeButton = () => {
   const { theme, setTheme } = useTheme()
-  var r = document.querySelector(':root');
+  // var r = document.querySelector(':root');
   const toggle = () =>{    
     if (theme==='light') {
       setTheme('dark');
-      r.style.setProperty('--navbg', '#303030');
+      // r.style.setProperty('--navbg', '#303030');
     }
     else {setTheme('light');
-    r.style.setProperty('--navbg', '#DED5D4');}
+    // r.style.setProperty('--navbg', '#DED5D4');
+  }
   }
   
   const [mounted, setMounted] = useState(false)
