@@ -5,6 +5,8 @@ import { useTheme } from 'next-themes'
 const ThemeButton = () => {
   const { theme, setTheme } = useTheme()
   // var r = document.querySelector(':root');
+
+  
   const toggle = () =>{    
     if (theme==='light') {
       setTheme('dark');
