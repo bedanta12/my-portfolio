@@ -10,7 +10,11 @@ module.exports = {
     extend: {
       backgroundImage: {
         'test' : "url('/cover.png')",
-        // 'sofi_bg_dark' : "url('/sofi-bg-dark.png')",
+        'cover1': "url('/cover1.png')",
+        'cover2': "url('/cover2.png')",
+        'cover3': "url('/cover3.png')",
+        'cover4': "url('/cover4.png')"
+        
       },
       boxShadow: {
         custom1: "0px 4px 18px 0px rgba(43, 12, 125, 0.32)",

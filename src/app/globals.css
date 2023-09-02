@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --navbg: #DED5D4;
 }
 
 
@@ -28,8 +29,9 @@
     rgb(var(--background-start-rgb));
 } */
 
-#home{
-  height: 85vh;
+
+section{
+  min-height: 100vh;
 }
 
 #landing-text{
@@ -37,7 +39,36 @@
 }
 
 nav{
-  background-image: radial-gradient( rgba(0, 0, 0, 0) 1px, var(--background) 1px );
-  background-size: 4px 4px;
-  backdrop-filter: blur(3px);
+  background-image: radial-gradient( rgba(0, 0, 0, 0) 1px, var(--navbg) 1px );
+    background-size: 4px 4px;
+  backdrop-filter: blur(12px);
+  
 }
+
+/* @media screen and (prefers-color-scheme: dark) {
+  nav{
+    background-image: radial-gradient( rgba(0, 0, 0, 0) 1px, #303030 1px );
+  }
+}
+
+@media screen and (prefers-color-scheme: light) {
+  nav{
+    background-image: radial-gradient( rgba(0, 0, 0, 0) 1px, #DED5D4 1px );
+  }
+} */
+/* 
+:is(.dark .dark\nav){
+  
+    background-image: radial-gradient( rgba(0, 0, 0, 0) 1px, #303030 1px );
+    background-size: 4px 4px;
+  backdrop-filter: blur(12px);
+  
+}
+
+:is(.light .light\nav){
+  
+  background-image: radial-gradient( rgba(0, 0, 0, 0) 1px, #DED5D4 1px );
+  background-size: 4px 4px;
+  backdrop-filter: blur(12px);
+
+} */
