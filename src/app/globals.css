@@ -38,6 +38,14 @@ section{
   line-height: 0.85 !important;
 }
 
+#contact-fancy-text{
+  line-height: 1.0 !important;
+}
+
+.grid{
+  grid-template-rows:min-content;
+}
+
 /* nav{
   background-image: radial-gradient( rgba(0, 0, 0, 0) 1px, var(--navbg) 1px );
     background-size: 4px 4px;

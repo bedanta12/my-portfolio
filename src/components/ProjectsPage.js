@@ -9,17 +9,12 @@ export default function ProjectsPage() {
             <div style={dirtyline.style} className="text-[5.125rem]">
                 projects
             </div>
-            <div className="flex flex-row justify-between items-end">
-                <div className=" w-1/5">
-                These are some of the projects that I worked on till now. 
+            <div className="flex flex-col">
+                <div className=" w-2/5">
+                Keeping my focus on User research and user interface, below are a selections of projects that I got the chance to work in.
                 </div>
-                <div className="flex flex-row">
-                    <span>
-                        grid
-                    </span>
-                    <span>
-                        cards
-                    </span>
+                <div>
+                    Check them out
                 </div>
             </div>
             <div className="flex flex-col my-10 gap-6 text-[#121212]">
