@@ -3,6 +3,7 @@ import './globals.css'
 // import { Inter } from 'next/font/google'
 import { ThemeProvider } from 'next-themes';
 import localFont from "next/font/local";
+import { PopupProvider } from '@/components/PopupContext';
 
 // const dirtyline = localFont({src: "../../fonts/dirtyline.ttf"})
 const aeonik = localFont({src: "../../fonts/Aeonik-Regular.ttf"})
@@ -20,7 +21,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="bg-[#FFF8F8] dark:bg-[#121212] scrollbar-hide" style={aeonik.style}>
         <ThemeProvider enableSystem={true} attribute="class">
-          {children}
+          <PopupProvider>
+            {children}
+          </PopupProvider>
         </ThemeProvider>
       </body>
     </html>

@@ -1,8 +1,10 @@
 import React from 'react';
 import ThemeButton from './ThemeButton';
+import { usePopup } from './PopupContext';
 
 
 const Navbar = () => {
+  const { isPopupOpen, togglePopup } = usePopup();
   
   return (    
     <nav className="flex flex-row justify-between p-4 items-center fixed left-6 top-0 right-6 z-20 overflow-hidden scrollbar-hide bg-[#DED5D4] dark:bg-[#303030]">
@@ -14,9 +16,9 @@ const Navbar = () => {
       </svg>
       <ThemeButton/>
       <div className="flex flex-row gap-6 font-medium pr-6">
-        <a>
+        <button onClick={togglePopup}>
           Contact
-        </a>
+        </button>
         <a>
           Know Me!
         </a>

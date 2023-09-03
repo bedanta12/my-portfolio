@@ -1,12 +1,11 @@
-import Link from 'next/link';
 import React from 'react';
-import ThemeButton from './ThemeButton';
+import { usePopup } from './PopupContext';
 import localFont from "next/font/local";
-
 const dirtyline = localFont({src: "../../fonts/dirtyline.ttf"})
 
-
 const Footer = () => {
+    const { isPopupOpen, togglePopup } = usePopup();
+
   return (
     <section className="p-10 flex flex-col-reverse">
         <div>
@@ -40,14 +39,14 @@ const Footer = () => {
                     <a href="https://www.linkedin.com/in/bedanta-mandal" target="_blank">
                         LinkedIn
                     </a>
-                    <div className="bg-[#FF4900] flex flex-col h-fit py-1 pl-1 pr-6 mr-6 mb-4 mt-20">
+                    <button onClick={togglePopup} className="bg-[#FF4900] flex flex-col h-fit py-1 pl-1 pr-6 mr-6 mb-4 mt-20">
                         <svg width="36" height="36" viewBox="0 0 36 36" className="scale-75 fill-current text-[#D9D9D9] dark:text-[#121212]">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M21.4779 12.8744L35.1267 26.5232L26.5598 35.0901L12.964 21.4943L12.964 32.9911L0.8486 32.9911L0.848601 9.47291H0.942594L0.859142 9.38946L9.38344 0.865159L9.38344 0.759012L32.9016 0.759012L32.9016 12.8744L21.4779 12.8744Z"/>
                         </svg>
                         <div className='font-bold text-4xl'>
                             Contact
                         </div>
-                    </div>
+                    </button>
                 </div>
         </div>
     </section>
