@@ -1,13 +1,21 @@
 import React from 'react';
+import Link from 'next/link';
 import { usePopup } from './PopupContext';
 import localFont from "next/font/local";
+import SlidingBar from './SlidingBar';
 const dirtyline = localFont({src: "../../fonts/dirtyline.ttf"})
 
 const Footer = () => {
     const { isPopupOpen, togglePopup } = usePopup();
+    const goToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
 
   return (
-    <section className="p-10 flex flex-col-reverse">
+    <section id="footer" className="p-10 flex flex-col-reverse">
         <div>
             @2023
         </div>
@@ -16,7 +24,7 @@ const Footer = () => {
                 Lets make something Useful
             </div>
             <div className="ml-auto flex flex-col text-3xl mr-20">
-                    <div className="flex flex-row items-center mt-10 gap-2">
+                    <div onClick={goToTop} className="flex flex-row items-center mt-10 gap-2 hover:cursor-pointer">
                         <div>
                             Get
                         </div>
@@ -30,9 +38,9 @@ const Footer = () => {
                     <a href='https://drive.google.com/file/d/1teguoPNWgoDj3p1hDeEX_PcjqBuPF7NN/view?usp=drive_link' target='_blank' className='my-10'>
                         Resume
                     </a>
-                    <a>
+                    <Link href='/about'>
                         Know Me!
-                    </a>
+                    </Link>
                     <a href="https://open.spotify.com/user/yoej0p7xokdteneg1h4xduy0t?si=juhD4IzbQ3-i4WE6jagxAA" target='_blank'>
                         Spotify
                     </a>
