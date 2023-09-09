@@ -23,7 +23,7 @@ const LandingPage = () => {
                         <p style={dirtyline.style} className="text-[4rem]">Creative Enthusiast</p>
                     </div>
                 </div>
-                <p className="ml-auto text-[0.875rem] mr-1" id="landing-text">Still a student, in IIT Guwahati</p>
+                <p className="ml-auto text-[20px] mr-1" id="landing-text">Still a student, in IIT Guwahati</p>
                 <svg width="45" height="66" viewBox="0 0 45 66" className="scale-75 ml-auto my-10 mr-2">
                     <rect x="15.9999" width="12" height="65" fill="#FF4900"/>
                     <rect x="35.5565" y="41" width="12" height="22" transform="rotate(45 35.5565 41)" fill="#FF4900"/>

@@ -8,7 +8,7 @@ export default function ContactPage() {
     const { isPopupOpen, togglePopup } = usePopup();
     const [dateState, setDateState] = useState(new Date());
     const [copied, setCopied] = useState(false);
-
+    
     const copyToClipboard = () => {
         const email = 'bedantarick7771@gmail.com'; // Replace with your email address
         navigator.clipboard.writeText(email).then(() => {
@@ -24,8 +24,8 @@ export default function ContactPage() {
 
     return (
         <div id="contact-fancy-text" className={`overflow-hidden bg-[#FFF8F8] dark:bg-[#121212]`}>
-            <svg width="1440" height="11" viewBox="0 0 1440 11">
-                <rect width="1440" height="11" transform="matrix(-1 0 0 -1 1440 11)" className="fill-[#FFF8F8] dark:fill-[#121212]" fill="#121212"/>
+            <svg viewBox="0 0 1440 11">
+                
                 <path d="M1434 11H1426L1432 0H1440L1434 11Z" fill="#FF3F01"/>
                 <path d="M1417.98 11H1409.98L1415.98 0H1423.98L1417.98 11Z" fill="#FF3F01"/>
                 <path d="M1401.96 11H1393.96L1399.96 0H1407.96L1401.96 11Z" fill="#FF3F01"/>
