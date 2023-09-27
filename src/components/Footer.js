@@ -15,15 +15,15 @@ const Footer = () => {
     };
 
   return (
-    <section id="footer" className="p-10 flex flex-col-reverse">
+    <section id="footer" className="p-8 md:p-10 flex flex-col-reverse">
         <div>
             @2023
         </div>
-        <div className="flex flex-row items-end justify-between">
-            <div className="w-1/2 text-6xl" style={dirtyline.style}>
+        <div className="flex flex-col-reverse md:flex-row items-end justify-between">
+            <div id="footer-landing-text" className="md:w-1/2 text-[32px] md:text-6xl" style={dirtyline.style}>
                 Lets make something Useful
             </div>
-            <div className="ml-auto flex flex-col text-3xl mr-20">
+            <div className="ml-auto hidden md:flex flex-col text-3xl mr-20">
                     <div onClick={goToTop} className="flex flex-row items-center mt-10 gap-2 hover:cursor-pointer">
                         <div>
                             Get
@@ -38,7 +38,7 @@ const Footer = () => {
                     <a href='https://drive.google.com/file/d/1teguoPNWgoDj3p1hDeEX_PcjqBuPF7NN/view?usp=drive_link' target='_blank' className='my-10'>
                         Resume
                     </a>
-                    <Link href='/about'>
+                    <Link href='/knowme'>
                         Know Me!
                     </Link>
                     <a href="https://open.spotify.com/user/yoej0p7xokdteneg1h4xduy0t?si=juhD4IzbQ3-i4WE6jagxAA" target='_blank'>
@@ -55,7 +55,41 @@ const Footer = () => {
                             Contact
                         </div>
                     </button>
+            </div>
+            <div className="md:hidden flex flex-row justify-between items-end w-full h-[40vh] mb-16">
+                <div className="flex flex-col text-[20px]">
+                    <a href='https://drive.google.com/file/d/1teguoPNWgoDj3p1hDeEX_PcjqBuPF7NN/view?usp=drive_link' target='_blank' className='my-10'>
+                        Resume
+                    </a>
+                    <Link href='/knowme'>
+                        Know Me!
+                    </Link>
+                    <a href="https://open.spotify.com/user/yoej0p7xokdteneg1h4xduy0t?si=juhD4IzbQ3-i4WE6jagxAA" target='_blank'>
+                        Spotify
+                    </a>
+                    <a href="https://www.linkedin.com/in/bedanta-mandal" target="_blank">
+                        LinkedIn
+                    </a>
                 </div>
+                <div className="flex flex-col justify-between h-full">
+                    <div onClick={goToTop} className="flex flex-row items-center gap-2 hover:cursor-pointer">
+                        <svg width="40" height="32" viewBox="0 0 40 32" className='fill-[#121212] dark:fill-[#FFF8F8]'>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M25.3142 15.0408V32H14.6695V15.1067L7.52693 22.2493L0 14.7223L14.6111 0.111243L14.6695 0.16964V0.0659458H25.2613L25.3272 0L39.9383 14.6111L32.4114 22.138L25.3142 15.0408ZM25.3141 15.0937H14.6695L25.3141 24.6426V15.0937Z" />
+                        </svg>
+                        <div className='text-base'>
+                            Back up
+                        </div>
+                    </div>
+                    <button onClick={togglePopup} className="bg-[#FF4900] flex flex-col h-fit py-2 pl-2 pr-12">
+                        <svg width="36" height="36" viewBox="0 0 36 36" className=" fill-current text-[#D9D9D9] dark:text-[#121212]">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M21.4779 12.8744L35.1267 26.5232L26.5598 35.0901L12.964 21.4943L12.964 32.9911L0.8486 32.9911L0.848601 9.47291H0.942594L0.859142 9.38946L9.38344 0.865159L9.38344 0.759012L32.9016 0.759012L32.9016 12.8744L21.4779 12.8744Z"/>
+                        </svg>
+                        <div id="zero-line-height" className='font-bold text-[24px]'>
+                            Contact
+                        </div>
+                    </button>
+                </div>
+            </div>
         </div>
     </section>
     );
