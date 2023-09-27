@@ -29,7 +29,7 @@ const AboutLandingPage = () => {
             <section>
             <Image className="scale-90 rounded-2xl" src="/bedanta.png" height={1141} width={1091} alt="" />
             </section>
-            <section className="flex flex-col">
+            <section id="about-landing-text" className="flex flex-col">
                 <div className="flex flex-col text-[64px] font-medium">
                     <span>
                     I’m <span className="text-[#FF4900]">Bedanta</span>. aka Ricky
