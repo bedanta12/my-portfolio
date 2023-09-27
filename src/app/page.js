@@ -8,10 +8,16 @@ import SlidingBar from '@/components/SlidingBar'
 import Slide from '@mui/material/Slide';
 import { usePopup } from '@/components/PopupContext';
 import ContactPageSmall from '@/components/ContactPageSmall'
+import React, { useState, useEffect } from 'react';
 
 export default function Home() {
   const { isPopupOpen, togglePopup } = usePopup();
-  const width = window.innerWidth;
+  let width = 768;
+
+  useEffect(() => {
+    width = window.innerWidth;
+  }, []);
+
 
   return (
     <main className="text-[#121212] dark:text-[#EAEAEA] bg-bg1 bg-no-repeat dark:bg-bg2 dark:bg-no-repeat relative">
