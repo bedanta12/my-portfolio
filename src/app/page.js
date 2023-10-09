@@ -22,16 +22,16 @@ export default function Home() {
         <SlidingBar/>
         <Footer/>
       </div>
-      {window?.innerWidth>=768&&<Slide direction="up" in={isPopupOpen} mountOnEnter unmountOnExit>
+      <Slide direction="up" in={isPopupOpen} mountOnEnter unmountOnExit>
         <div className="sticky bottom-0 left-0 right-0">
           <ContactPage/>
         </div>
-      </Slide>}
-      {window?.innerWidth<768&&<Slide direction="up" in={isPopupOpen} mountOnEnter unmountOnExit>
+      </Slide>
+      {/* {window?.innerWidth<768&&<Slide direction="up" in={isPopupOpen} mountOnEnter unmountOnExit>
         <div className="sticky bottom-0 left-0 right-0">
           <ContactPageSmall/>
         </div>
-      </Slide>}
+      </Slide>} */}
     </main>
   )
 }
