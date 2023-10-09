@@ -15,7 +15,7 @@ const Footer = () => {
     };
 
   return (
-    <section id="footer" className="p-8 md:p-10 flex flex-col-reverse">
+    <footer id="footer" className="p-8 md:p-10 flex flex-col-reverse">
         <div>
             @2023
         </div>
@@ -91,7 +91,7 @@ const Footer = () => {
                 </div>
             </div>
         </div>
-    </section>
+    </footer>
     );
 };
 

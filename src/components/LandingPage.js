@@ -13,16 +13,16 @@ const LandingPage = (props) => {
                 <div className="hidden md:flex flex-col" id="landing-text">
                     <div className="flex flex-row justify-between items-end">
                         <p className="mb-1 md:mb-3 text-[7px] md:text-[20px] 2xl:text-[28px]">I'm</p>
-                        <p style={dirtyline.style} className="text-[20px] md:text-[4rem] 2xl:text-[10rem]">Digital</p>
+                        <p style={dirtyline.style} className="text-[20px] md:text-[3rem] lg:text-[4rem] 2xl:text-[8rem]">Digital</p>
                     </div>
                     <div className="flex flex-row justify-between items-end">
-                        <p style={dirtyline.style} className="text-[20px] md:text-[4rem] 2xl:text-[10rem]">Bedanta</p>
-                        <p style={dirtyline.style} className="text-[20px] md:text-[4rem] 2xl:text-[10rem] text-[#FF4900]">Designer</p>
+                        <p style={dirtyline.style} className="text-[20px] md:text-[3rem] lg:text-[4rem] 2xl:text-[8rem]">Bedanta</p>
+                        <p style={dirtyline.style} className="text-[20px] md:text-[3rem] lg:text-[4rem] 2xl:text-[8rem] text-[#FF4900]">Designer</p>
                     </div>
                     <div className="flex flex-row justify-between items-end">
-                        <p style={dirtyline.style} className="text-[20px] md:text-[4rem] 2xl:text-[10rem]">Rick</p>
+                        <p style={dirtyline.style} className="text-[20px] md:text-[3rem] lg:text-[4rem] 2xl:text-[8rem]">Rick</p>
                         {/* <div className="border-b-2 border-white w-96"></div> */}
-                        <p style={dirtyline.style} className="text-[20px] md:text-[4rem] 2xl:text-[10rem]">Creative Enthusiast</p>
+                        <p style={dirtyline.style} className="text-[20px] md:text-[3rem] lg:text-[4rem] 2xl:text-[8rem] whitespace-nowrap">Creative Enthusiast</p>
                     </div>
                 </div>
                 <div className="flex md:hidden flex-col h-[60vh] mt-24 justify-between" id="landing-text">
