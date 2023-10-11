@@ -33,7 +33,8 @@ export default function ProjectsPage() {
                                 <path d="M32.1703 10.7234H10.7235V18.383H24.2554L10.7235 31.6596L16.3405 37.0213L37.2767 15.8298L32.1703 10.7234Z" fill="#FFF8F8"/>
                                 <path d="M29.6171 37.0213V24.2553L37.2767 31.6596V37.0213H29.6171Z" fill="#FFF8F8"/>
                                 </svg>
-                                <svg width="48" height="48" viewBox="0 0 48 48" className="transition-opacity ease-out duration-100 opacity-0 scale-0 group-hover:opacity-100 transform group-hover:scale-100" >
+                                {/* <svg width="48" height="48" viewBox="0 0 48 48" className="transition-transform ease-out duration-300 transform -translate-x-1 opacity-0 group-hover:transform group-hover:translate-x-0 hover:opacity-100" > */}
+                                <svg width="48" height="48" viewBox="0 0 48 48" className="transition-opacity ease-in duration-500 opacity-0 scale-100 group-hover:opacity-100 transform group-hover:scale-0" >
                                 <path d="M28.3077 17H17V21.0777V28.1456V31L26.9615 31H31V28.1456V19.7184V17H28.3077Z" fill="#FFF8F8"/>
                                 </svg>
                             </svg>
@@ -78,7 +79,8 @@ export default function ProjectsPage() {
                                 <path d="M32.1703 10.7234H10.7235V18.383H24.2554L10.7235 31.6596L16.3405 37.0213L37.2767 15.8298L32.1703 10.7234Z" fill="#FFF8F8"/>
                                 <path d="M29.6171 37.0213V24.2553L37.2767 31.6596V37.0213H29.6171Z" fill="#FFF8F8"/>
                                 </svg>
-                                <svg width="48" height="48" viewBox="0 0 48 48" className="transition-opacity ease-out duration-100 opacity-0 scale-0 group-hover:opacity-100 transform group-hover:scale-100" >
+                                {/* <svg width="48" height="48" viewBox="0 0 48 48" className="transition-transform ease-out duration-300 transform -translate-x-1 opacity-0 group-hover:transform group-hover:translate-x-0 hover:opacity-100" > */}
+                                <svg width="48" height="48" viewBox="0 0 48 48" className="transition-opacity ease-in duration-500 opacity-0 scale-100 group-hover:opacity-100 transform group-hover:scale-0" >
                                 <path d="M28.3077 17H17V21.0777V28.1456V31L26.9615 31H31V28.1456V19.7184V17H28.3077Z" fill="#FFF8F8"/>
                                 </svg>
                             </svg>
@@ -125,7 +127,8 @@ export default function ProjectsPage() {
                                 <path d="M32.1703 10.7234H10.7235V18.383H24.2554L10.7235 31.6596L16.3405 37.0213L37.2767 15.8298L32.1703 10.7234Z" fill="#FFF8F8"/>
                                 <path d="M29.6171 37.0213V24.2553L37.2767 31.6596V37.0213H29.6171Z" fill="#FFF8F8"/>
                                 </svg>
-                                <svg width="48" height="48" viewBox="0 0 48 48" className="transition-opacity ease-out duration-100 opacity-0 scale-0 group-hover:opacity-100 transform group-hover:scale-100" >
+                                {/* <svg width="48" height="48" viewBox="0 0 48 48" className="transition-transform ease-out duration-300 transform -translate-x-1 opacity-0 group-hover:transform group-hover:translate-x-0 hover:opacity-100" > */}
+                                <svg width="48" height="48" viewBox="0 0 48 48" className="transition-opacity ease-in duration-500 opacity-0 scale-100 group-hover:opacity-100 transform group-hover:scale-0" >
                                 <path d="M28.3077 17H17V21.0777V28.1456V31L26.9615 31H31V28.1456V19.7184V17H28.3077Z" fill="#FFF8F8"/>
                                 </svg>
                             </svg>
@@ -170,7 +173,8 @@ export default function ProjectsPage() {
                                 <path d="M32.1703 10.7234H10.7235V18.383H24.2554L10.7235 31.6596L16.3405 37.0213L37.2767 15.8298L32.1703 10.7234Z" fill="#FFF8F8"/>
                                 <path d="M29.6171 37.0213V24.2553L37.2767 31.6596V37.0213H29.6171Z" fill="#FFF8F8"/>
                                 </svg>
-                                <svg width="48" height="48" viewBox="0 0 48 48" className="transition-opacity ease-out duration-100 opacity-0 scale-0 group-hover:opacity-100 transform group-hover:scale-100" >
+                                {/* <svg width="48" height="48" viewBox="0 0 48 48" className="transition-transform ease-out duration-300 transform -translate-x-1 opacity-0 group-hover:transform group-hover:translate-x-0 hover:opacity-100" > */}
+                                <svg width="48" height="48" viewBox="0 0 48 48" className="transition-opacity ease-in duration-500 opacity-0 scale-100 group-hover:opacity-100 transform group-hover:scale-0" >
                                 <path d="M28.3077 17H17V21.0777V28.1456V31L26.9615 31H31V28.1456V19.7184V17H28.3077Z" fill="#FFF8F8"/>
                                 </svg>
                             </svg>
