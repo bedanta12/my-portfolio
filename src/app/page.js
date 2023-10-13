@@ -8,32 +8,68 @@ import SlidingBar from '@/components/SlidingBar'
 import Slide from '@mui/material/Slide';
 import { usePopup } from '@/components/PopupContext';
 import ContactPageSmall from '@/components/ContactPageSmall'
-import LoadingScreen from '@/components/LoadingPage';
+import LoadingScreen from '../app/loading';
 import React, { useState, useEffect } from 'react';
+import styles from 'src/app/globals.css';
+
 export default function Home() {
   const { isPopupOpen, togglePopup } = usePopup();
   const [isLoading, setIsLoading] = useState(true);
-  
+  const [showLoading, setShowLoading] = useState(true);
+
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 2000); 
+    }, 2400);
   }, []);
+
+  useEffect(() => {
+    if (!isLoading) {
+      setTimeout(() => {
+        setShowLoading(false);
+      }, 500);
+    }
+  }, [isLoading]);
+
+  const loadingContainerStyle = {
+    
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100vw',
+    height: '100vh',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    opacity: isLoading ? 1 : 0,
+    transition: 'opacity 0.5s, transform 1.5s',   // Please Set the loading slide up opacity/speed here !!
+    transform: isLoading ? 'translateY(0)' : 'translateY(-100%)',
+    zIndex: 99999,
+  };
 
   return (
     <main className="text-[#121212] dark:text-[#EAEAEA] bg-bg1 bg-no-repeat dark:bg-bg2 dark:bg-no-repeat relative">
-      {isLoading ? (  
-        <LoadingScreen />
-      ) : (
-      <div className="bg-[#DED5D4] bg-opacity-50 dark:bg-[#303030] dark:bg-opacity-50 overflow-y-scroll scrollbar-hide mx-3 md:mx-6">
-        <Navbar />
-        {/* <ChatPage /> */}
-        <LandingPage />
-        <ProjectsPage />
-        <SlidingBar/>
-        <Footer/>
-      </div>
-       )}
+    
+    {showLoading && (
+        <div style={loadingContainerStyle}>
+          <LoadingScreen />
+        </div>
+    )}
+      
+          
+        <div className="bg-[#DED5D4] bg-opacity-50 dark:bg-[#303030] dark:bg-opacity-50 overflow-y-scroll scrollbar-hide mx-3 md:mx-6">  
+        
+          <Navbar />
+          {/* <ChatPage /> */}
+          <LandingPage />
+          <ProjectsPage />
+          <SlidingBar />
+          <Footer />
+          </div>  
+      
+      
+      
+      
       <Slide direction="up" in={isPopupOpen} mountOnEnter unmountOnExit>
         <div className="sticky bottom-0 left-0 right-0">
           <ContactPage/>

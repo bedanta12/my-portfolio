@@ -185,7 +185,4 @@ opacity: 50%;
   width: 50px; /* Set the width to 50px */
   height: 50px; /* Set the height to 50px */
 }
-.slideUp {
-  transform: translateY(-100%); /* Slide up by 100% of the height */
-}
 /* -----------> */
