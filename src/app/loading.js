@@ -1,5 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react';
+import styles from 'src/app/globals.css';
 
 const Loading = () => {
   const imagePaths = ['/load1.svg', '/load2.svg', '/load3.svg']; // Update paths to your SVG images
@@ -13,6 +14,8 @@ const Loading = () => {
       );
     }, 800); // Change images every 0.5 second
 
+
+    
     return () => clearInterval(interval);
   }, []);
 

@@ -184,5 +184,6 @@ opacity: 50%;
 .image {
   width: 50px; /* Set the width to 50px */
   height: 50px; /* Set the height to 50px */
+  transition: cubic-bezier(0.25, 0.1, 0.25, 1), transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 /* -----------> */

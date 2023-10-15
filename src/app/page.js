@@ -41,9 +41,9 @@ export default function Home() {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    opacity: isLoading ? 1 : 0,
-    transition: 'opacity 0.5s, transform 1.5s',   // Please Set the loading slide up opacity/speed here !!
-    transform: isLoading ? 'translateY(0)' : 'translateY(-100%)',
+    opacity: isLoading ? 1 : 1,
+    transition: ' transform 1.5s',   // Please Set the loading slide up opacity/speed here !!
+    transform: isLoading ? 'translateY(0)' : 'translateY(-190%)',
     zIndex: 99999,
   };
 
