@@ -9,11 +9,26 @@ import SlidingBar from '@/components/SlidingBar';
 import Slide from '@mui/material/Slide';
 import { usePopup } from '@/components/PopupContext';
 import ContactPageSmall from '@/components/ContactPageSmall';
+import { useState } from 'react';
 
 export default function Home() {
   const { isPopupOpen, togglePopup } = usePopup();
 
+    const [isSmallScreen, setIsSmallScreen] = useState(false);
+  
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 1200); // Define your desired breakpoint here
+    };
+  
+   
+    // Then con
+
   useLayoutEffect(() => {
+
+    //contactPageHandling
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
     const handleOutsideClick = (e) => {
       if (isPopupOpen && !document.getElementById('contact-fancy-text').contains(e.target)) {
         togglePopup();
@@ -27,6 +42,7 @@ export default function Home() {
     }
 
     return () => {
+      window.removeEventListener('resize', handleResize);
       document.querySelector("body").style.overflow = "auto";
       document.removeEventListener('click', handleOutsideClick, true);
     };
@@ -43,10 +59,10 @@ export default function Home() {
         <Footer />
       </div>
       <Slide direction="up" in={isPopupOpen} mountOnEnter unmountOnExit>
-        <div id="contact-fancy-text" className="sticky bottom-0 left-0 right-0">
-          <ContactPage />
-        </div>
-      </Slide>
+      <div id="contact-fancy-text" className="sticky bottom-0 left-0 right-0">
+        {isSmallScreen ? <ContactPageSmall /> : <ContactPage />}
+      </div>
+    </Slide>
     </main>
   );
 }
