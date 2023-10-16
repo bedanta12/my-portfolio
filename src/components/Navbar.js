@@ -4,13 +4,17 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import Collapse from 'react-collapse';
 
-const Navbar = () => {
+const Navbar = ({setIsContactPageOpen,isContactPageOpen}) => {
   const { isPopupOpen, togglePopup } = usePopup();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  const handleContactPage = () => {
+    setIsContactPageOpen(!isContactPageOpen)
+  }
   
   return (    
     <nav className="flex flex-row justify-between pt-1 pr-4 md:p-4 items-center fixed left-3 right-3 md:left-6 top-0 md:right-6 z-20 overflow-hidden scrollbar-hide backdrop-blur">
@@ -24,7 +28,7 @@ const Navbar = () => {
       </Link>
       <ThemeButton/>
       <div className="hidden flex-row gap-6 font-medium pr-6 md:flex">
-        <button onClick={togglePopup}>
+        <button onClick={handleContactPage}>
           Contact
         </button>
         <Link href='/knowme'>
