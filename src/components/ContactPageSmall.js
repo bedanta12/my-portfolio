@@ -1,5 +1,6 @@
 import { usePopup } from '@/components/PopupContext';
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import localFont from "next/font/local";
 const dirtyline = localFont({src: "../../fonts/dirtyline.ttf"})
 
@@ -143,7 +144,9 @@ export default function ContactPage() {
                         <a href="https://www.linkedin.com/in/bedanta-mandal" target="_blank">
                                 LinkedIn
                             </a>
-                        <span>Know Me!</span>
+                            <Link href='/knowme'>
+                                Know Me!
+                            </Link>
                     </div>
                     <div className="flex flex-row items-center my-0.5">
                     <a href='https://www.behance.net/bedantamandal' target="_blank">
