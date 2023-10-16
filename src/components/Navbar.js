@@ -3,7 +3,6 @@ import { usePopup } from './PopupContext';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import Collapse from 'react-collapse';
-import { RiCloseLine } from 'react-icons/ri';
 
 const Navbar = () => {
   const { isPopupOpen, togglePopup } = usePopup();
@@ -39,7 +38,20 @@ const Navbar = () => {
       <span onClick={toggleMenu} className="cursor-pointer self-end">
         {isOpen ? (
           <span className="flex items-center mb-1">
-            <RiCloseLine size={20} />
+            <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        className="h-5 w-5"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M6 18L18 6M6 6l12 12"
+        />
+      </svg>
             <span className="ml-1">Close</span>
           </span>
         ) : (
