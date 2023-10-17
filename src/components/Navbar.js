@@ -22,7 +22,7 @@ const Navbar = () => {
           <rect x="1" y="1" width="70" height="38" rx="19" stroke-width="2"/>
         </svg>
       </Link>
-      <ThemeButton  className="inline-block" style={{ width: "10px" }}/>
+      <ThemeButton/>
       <div className="hidden flex-row gap-6 font-medium pr-6 md:flex">
         <button onClick={togglePopup}>
           Contact
