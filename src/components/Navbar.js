@@ -3,7 +3,6 @@ import { usePopup } from './PopupContext';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import Collapse from 'react-collapse';
-import { RiCloseLine } from 'react-icons/ri';
 
 const Navbar = () => {
   const { isPopupOpen, togglePopup } = usePopup();
