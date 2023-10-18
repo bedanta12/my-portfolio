@@ -1,0 +1,8 @@
+button,a,link{
+    transition: 0.8s;
+}
+button:hover,a:hover,link:hover{
+    color: #ff4900 ;
+    font-size: larger;
+    transform: rotate(-15deg);
+}
