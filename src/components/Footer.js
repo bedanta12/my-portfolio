@@ -68,18 +68,16 @@ const Footer = () => {
             className=" flex flex-col py-1 pl-1 pr-6 mr-6 mb-4 mt-20 button-container"
             style={{ transition: "all 0.3s" ,inlineSize:"150px", overflowWrap:"no-break"}} 
           >
-            <svg
-              width="36"
-              height="36"
-              viewBox="0 0 36 36"
-              className="scale-75 fill-current text-[#D9D9D9] dark:text-[#121212] arrow-icon"
-              style={{ ttransition: "all 0.3s", marginBottom: "-10px"}}
+           
+            <svg xmlns="http://www.w3.org/2000/svg" 
+            width="36"
+            height="36"
+            viewBox="0 0 36 36" 
+            fill="none"
+            className="scale-75 fill-current text-[#D9D9D9] dark:text-[#121212] arrow-icon"
+            style={{ ttransition: "all 0.3s", marginBottom: "-10px"}}
             >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M21.4779 12.8744L35.1267 26.5232L26.5598 35.0901L12.964 21.4943L12.964 32.9911L0.8486 32.9911L0.848601 9.47291H0.942594L0.859142 9.38946L9.38344 0.865159L9.38344 0.759012L32.9016 0.759012L32.9016 12.8744L21.4779 12.8744Z"
-              />
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M21.4779 12.8745L35.1267 26.5233L26.5598 35.0902L12.964 21.4944L12.964 32.9911L0.8486 32.9911L0.848601 9.47297H0.942594L0.859142 9.38952L9.38344 0.86522L9.38344 0.759073H32.9016L32.9016 12.8745H21.4779Z" fill="#FFF8F8"/>
             </svg>
             <div
               className="font-bold text-4xl text-label"
@@ -106,8 +104,9 @@ const Footer = () => {
             background-image: url("/Contactt.png");
             backgroud-size:cover
           }
+         
   .button-container:hover .arrow-icon {
-    animation: flyAnimation 0.5s forwards;
+    animation: flyAnimation 0.6s forwards;
   }
 
   @keyframes flyAnimation {
@@ -115,7 +114,7 @@ const Footer = () => {
       transform: translateY(100px) translateX(100px) scale(1);
     }
     100% {
-      transform: translateY(16px) translateX(16px) scale(2.2);
+      transform:translateY(17px) translateX(17px) scale(2.0)
     }
   }
 
