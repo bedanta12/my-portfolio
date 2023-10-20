@@ -59,7 +59,7 @@ const Navbar = () => {
     <div
         className={`md:hidden ${
           isOpen ? 'block' : 'hidden'
-        } absolute right-3 left-3 top-12 z-30  p-4 rounded-md `
+        } fixed right-3 left-3 top-12 z-30  p-4 rounded-md `
       } 
       >
         <ul className="flex flex-col items-end justify-center ">
