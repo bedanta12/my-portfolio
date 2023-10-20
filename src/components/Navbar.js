@@ -13,6 +13,7 @@ const Navbar = () => {
   };
   
   return (    
+    <div style={{ position: 'relative' }}>
     <nav className="flex flex-row items-center mt-2 lg:mt-0  justify-between pt-2 pr-4 md:p-4 fixed left-3 right-3 md:left-6 top-0 md:right-6 z-20 overflow-hidden scrollbar-hide backdrop-blur">
       <Link href='/' style={{alignSelf:"start"}} >
         <svg width="72" height="40" viewBox="0 0 72 40" className="dark:stroke-[#FFF8F8] stroke-[#121212] fill-transparent scale-[60%] md:scale-100 md:w-[72px] md:h-[40px]">
@@ -38,7 +39,7 @@ const Navbar = () => {
       <span onClick={toggleMenu} className="cursor-pointer self-end mb-4">
         {isOpen ? (
           <span className="flex items-center">
-            <span className="mr-1">Close</span>
+            <span className="mr-4">Close</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
   <g opacity="0.6">
     <rect x="17.3911" width="3.68925" height="24.595" transform="rotate(45 17.3911 0)" fill="#121212"/>
@@ -52,24 +53,35 @@ const Navbar = () => {
           'Menu'
         )}
       </span>
-      <Collapse isOpened={isOpen} className="z-30 absolute right-0 top-12">
-  <ul className="flex flex-col items-end justify-center">
-     <li className="mb-3">
-      <Link href="/knowme">Know Me!</Link>
-    </li>
-    <li className="mb-3">
-      <button type="button" onClick={togglePopup}>Contact</button>
-    </li>
-    <li className="mb-3">
-      <a href="https://drive.google.com/file/d/1teguoPNWgoDj3p1hDeEX_PcjqBuPF7NN/view?usp=drive_link" target="_blank">
-        Resume
-      </a>
-    </li>
-  </ul>
-</Collapse>
 
     </div>
     </nav>
+    <div
+        className={`md:hidden ${
+          isOpen ? 'block' : 'hidden'
+        } absolute right-3 left-3 top-12 z-30  p-4 rounded-md `
+      } 
+      >
+        <ul className="flex flex-col items-end justify-center ">
+          <li className="mb-3">
+            <Link href="/knowme">Know Me!</Link>
+          </li>
+          <li className="mb-3">
+            <button type="button" onClick={togglePopup}>
+              Contact
+            </button>
+          </li>
+          <li className="mb-3">
+            <a
+              href="https://drive.google.com/file/d/1teguoPNWgoDj3p1hDeEX_PcjqBuPF7NN/view?usp=drive_link"
+              target="_blank"
+            >
+              Resume
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
     
     );
 };
