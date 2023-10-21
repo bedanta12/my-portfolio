@@ -3,6 +3,7 @@ import { usePopup } from './PopupContext';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import Collapse from 'react-collapse';
+import { useEffect } from 'react';
 
 const Navbar = () => {
   const { isPopupOpen, togglePopup } = usePopup();
@@ -11,10 +12,30 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  useEffect(() => {
+    const handleLinkClick = () => {
+      if (isOpen) {
+        setIsOpen(false);
+      }
+    };
+    // Attach the event listener to the click event for the links
+    document.querySelectorAll('a, button').forEach((elem) => {
+      elem.addEventListener('click', handleLinkClick);
+    });
+
+    return () => {
+      // Clean up the event listener when the component is unmounted
+      document.querySelectorAll('a, button').forEach((elem) => {
+        elem.removeEventListener('click', handleLinkClick);
+      });
+    };
+  }, [isOpen]);
   
   return (    
     <div style={{ position: 'relative' }}>
-    <nav className="flex flex-row items-center mt-2 lg:mt-0  justify-between pt-2 pr-4 md:p-4 fixed left-3 right-3 md:left-6 top-0 md:right-6 z-20 overflow-hidden scrollbar-hide backdrop-blur">
+      <nav className="flex flex-row items-center mt-2 lg:mt-0 justify-between mx-auto max-w-screen-xl pt-2 pr-4 md:p-4 fixed left-3 right-3 md:left-6 top-0 md:right-6 z-20 overflow-hidden scrollbar-hide backdrop-blur">
+
       <Link href='/' style={{alignSelf:"start"}} >
         <svg width="72" height="40" viewBox="0 0 72 40" className="dark:stroke-[#FFF8F8] stroke-[#121212] fill-transparent scale-[60%] md:scale-100 md:w-[72px] md:h-[40px]">
           <rect x="16" y="14" width="16" height="16" rx="8" className='dark:fill-[#FFF8F8] fill-[#121212]'/>
@@ -39,12 +60,11 @@ const Navbar = () => {
       <span onClick={toggleMenu} className="cursor-pointer self-end mb-4">
         {isOpen ? (
           <span className="flex items-center">
-            <span className="mr-4">Close</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <svg width="14" height="14" viewBox="0 0 20 20" fill="none" class="dark:text-white text-black">
   <g opacity="0.6">
-    <rect x="17.3911" width="3.68925" height="24.595" transform="rotate(45 17.3911 0)" fill="#121212"/>
-    <path d="M10.0322 7.42358H4.81484L8.47071e-05 2.60883L2.60878 0.000137626L10.0322 7.42358Z" fill="#121212"/>
-    <rect x="19.9995" y="17.3912" width="3.68925" height="14.0687" transform="rotate(135 19.9995 17.3912)" fill="#121212"/>
+    <rect x="17.3911" width="3.68925" height="24.595" transform="rotate(45 17.3911 0)" fill="currentColor"/>
+    <path d="M10.0322 7.42358H4.81484L8.47071e-05 2.60883L2.60878 0.000137626L10.0322 7.42358Z" fill="currentColor"/>
+    <rect x="19.9995" y="17.3912" width="3.68925" height="14.0687" transform="rotate(135 19.9995 17.3912)" fill="currentColor"/>
   </g>
 </svg>
 
@@ -59,7 +79,7 @@ const Navbar = () => {
     <div
         className={`md:hidden ${
           isOpen ? 'block' : 'hidden'
-        } absolute right-3 left-3 top-12 z-30  p-4 rounded-md `
+        } fixed right-3 left-3 top-12 z-30  p-4 rounded-md `
       } 
       >
         <ul className="flex flex-col items-end justify-center ">
