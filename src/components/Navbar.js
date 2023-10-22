@@ -3,7 +3,7 @@ import { usePopup } from './PopupContext';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import Collapse from 'react-collapse';
-
+import "../app/navbarhover.css";
 const Navbar = () => {
   const { isPopupOpen, togglePopup } = usePopup();
   const [isOpen, setIsOpen] = useState(false);
