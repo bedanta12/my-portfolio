@@ -13,8 +13,8 @@ const Navbar = () => {
   };
   
   return (    
-    <nav className="flex flex-row justify-between pt-1 pr-4 md:p-4 items-center fixed left-3 right-3 md:left-6 top-0 md:right-6 z-20 overflow-hidden scrollbar-hide backdrop-blur">
-      <Link href='/'>
+    <nav className="flex flex-row items-center justify-between pt-2 pr-4 md:p-4 fixed left-3 right-3 md:left-6 top-0 md:right-6 z-20 overflow-hidden scrollbar-hide backdrop-blur">
+      <Link href='/' style={{alignSelf:"start"}} >
         <svg width="72" height="40" viewBox="0 0 72 40" className="dark:stroke-[#FFF8F8] stroke-[#121212] fill-transparent scale-[60%] md:scale-100 md:w-[72px] md:h-[40px]">
           <rect x="16" y="14" width="16" height="16" rx="8" className='dark:fill-[#FFF8F8] fill-[#121212]'/>
           <rect x="48" y="14" width="16" height="16" rx="8" className='dark:fill-[#FFF8F8] fill-[#121212]'/>
@@ -34,28 +34,48 @@ const Navbar = () => {
           Resume
         </a>
       </div>
-      <div className='flex flex-col md:hidden text-[16px]'>
-        <span onClick={toggleMenu}>Menu</span>
-        <Collapse isOpened={isOpen} className="z-30 absolute right-0 top-10">
-        <ul>
-          <li>
-          <button onClick={togglePopup}>
-          Contact
-        </button>
-          </li>
-          <li>
-          <Link href='/knowme'>
-          Know Me!
-        </Link>
-          </li>
-          <li>
-            <a href='https://drive.google.com/file/d/1teguoPNWgoDj3p1hDeEX_PcjqBuPF7NN/view?usp=drive_link' target='_blank'>
-          Resume
-        </a>
-        </li>
-        </ul>
-        </Collapse>
-      </div>
+      <div className="flex flex-col md:hidden text-[16px] mt-5 ">
+      <span onClick={toggleMenu} className="cursor-pointer self-end mb-4">
+        {isOpen ? (
+          <span className="flex items-center">
+            <span className="mr-1">Close</span>
+            <svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="20"
+  height="20"
+  viewBox="0 0 20 20"
+  fill="none"
+  stroke="currentColor"
+  strokeWidth="2"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+>
+  <line x1="4" y1="4" x2="16" y2="16" />
+  <line x1="16" y1="4" x2="4" y2="16" />
+</svg>
+
+          </span>
+        ) : (
+          'Menu'
+        )}
+      </span>
+      <Collapse isOpened={isOpen} className="z-30 absolute right-0 top-12">
+  <ul className="flex flex-col items-end justify-center">
+     <li className="mb-3">
+      <Link href="/knowme">Know Me!</Link>
+    </li>
+    <li className="mb-3">
+      <button type="button" onClick={togglePopup}>Contact</button>
+    </li>
+    <li className="mb-3">
+      <a href="https://drive.google.com/file/d/1teguoPNWgoDj3p1hDeEX_PcjqBuPF7NN/view?usp=drive_link" target="_blank">
+        Resume
+      </a>
+    </li>
+  </ul>
+</Collapse>
+
+    </div>
     </nav>
     
     );
