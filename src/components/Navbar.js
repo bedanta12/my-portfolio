@@ -25,13 +25,13 @@ const Navbar = () => {
       </Link>
       <ThemeButton/>
       <div className="hidden flex-row gap-6 font-medium pr-6 md:flex">
-        <button onClick={togglePopup}>
+        <button className="underlineEffect"onClick={togglePopup}>
           Contact
         </button>
-        <Link href='/knowme'>
+        <Link className="underlineEffect"href='/knowme'>
           Know Me!
         </Link>
-        <a href='https://drive.google.com/file/d/1teguoPNWgoDj3p1hDeEX_PcjqBuPF7NN/view?usp=drive_link' target='_blank'>
+        <a className="underlineEffect"href='https://drive.google.com/file/d/1teguoPNWgoDj3p1hDeEX_PcjqBuPF7NN/view?usp=drive_link' target='_blank'>
           Resume
         </a>
       </div>

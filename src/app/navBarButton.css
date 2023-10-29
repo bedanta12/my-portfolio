@@ -1,15 +1,11 @@
-button,
-a,
-link {
+.underlineEffect {
     display: inline-block;
     position: relative;
     transition: 0.5s ease-in-out;
     /* color: #0087ca; */
 }
 
-button::after,
-a::after,
-link::after {
+.underlineEffect::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -22,12 +18,7 @@ link::after {
     transition: transform 0.5s ease-out;
 }
 
-button:hover::after,
-a:hover::after,
-link:hover::after {
+.underlineEffect:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
-}
-button:hover,link:hover ,a:hover {
-    font-size: large;
 }
