@@ -4,6 +4,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import Collapse from "react-collapse";
 import { useEffect } from "react";
+import '../app/navBarButton.css'
 
 const Navbar = () => {
   const { isPopupOpen, togglePopup } = usePopup();
@@ -72,9 +73,9 @@ const Navbar = () => {
         </Link>
         <ThemeButton />
         <div className="hidden flex-row gap-6 font-medium pr-6 md:flex">
-          <button onClick={togglePopup}>Contact</button>
-          <Link href="/knowme">Know Me!</Link>
-          <a
+          <button className="underlineEffect" onClick={togglePopup}>Contact</button>
+          <Link className="underlineEffect" href="/knowme">Know Me!</Link>
+          <a className="underlineEffect"
             href="https://drive.google.com/file/d/1teguoPNWgoDj3p1hDeEX_PcjqBuPF7NN/view?usp=drive_link"
             target="_blank"
           >
@@ -122,21 +123,20 @@ const Navbar = () => {
         </div>
       </nav>
       <div
-        className={`md:hidden ${
-          isOpen ? "block" : "hidden"
-        } fixed right-3 left-3 top-12 z-30  p-4 rounded-md `}
+        className={`md:hidden ${isOpen ? "block" : "hidden"
+          } fixed right-3 left-3 top-12 z-30  p-4 rounded-md `}
       >
         <ul className="flex flex-col items-end justify-center ">
           <li className="mb-3">
-            <Link href="/knowme">Know Me!</Link>
+            <Link className="underlineEffect" href="/knowme">Know Me!</Link>
           </li>
           <li className="mb-3">
-            <button type="button" onClick={togglePopup}>
+            <button className="underlineEffect" type="button" onClick={togglePopup}>
               Contact
             </button>
           </li>
           <li className="mb-3">
-            <a
+            <a className="underlineEffect"
               href="https://drive.google.com/file/d/1teguoPNWgoDj3p1hDeEX_PcjqBuPF7NN/view?usp=drive_link"
               target="_blank"
             >

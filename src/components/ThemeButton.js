@@ -28,7 +28,7 @@ const ThemeButton = () => {
   }
 
   return (
-        <div className="flex items-center scale-[60%] md:scale-100 " style={{alignSelf:"start"}}>
+        <div className="flex items-center scale-[60%] md:scale-100">
             <input
               type="checkbox"
               id="darkModeToggle"
